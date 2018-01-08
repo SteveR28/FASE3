@@ -1,0 +1,119 @@
+create table usuario(
+nickname varchar(100) primary key,
+nombre varchar(100) not null,
+correo varchar(100) not null,
+fecha_nac varchar(100) not null,
+contra varchar(100) not null
+);
+
+create table proyecto(
+cod_pro varchar(100) primary key,
+nombre varchar(100) not null,
+fecha_i varchar(100) not null,
+fecha_f varchar(100) not null,
+pago int(8) not null,
+nickname varchar(100) not null,
+Constraint Foreign Key (nickname) References usuario(nickname)
+);
+
+create table tarea_individual(
+cod_tarea varchar(100) primary key,
+nombre varchar(100) not null,
+descripcion varchar(100) not null,
+fecha_i varchar(100) not null,
+requisitos varchar(100) not null,
+pago int(8) not null,
+nickname varchar(100) not null,
+constraint foreign key (nickname) references usuario(nickname)
+);
+
+create table asociacion(
+cod_aso varchar(100) primary key,
+nombre varchar(100) not null,
+resumen varchar(100) not null,
+logo varchar(100) not null,
+nickname varchar(100) not null,
+constraint foreign key (nickname) references usuario(nickname)
+);
+
+create table invitacion(
+cod_inv int(8) primary key,
+cod_aso varchar(100) not null,
+nickname varchar(100) not null,
+constraint foreign key (cod_aso) references asociacion(cod_aso),
+constraint foreign key (nickname) references usuario(nickname)
+);
+
+
+create table habilidad(
+cod_hab varchar(100) primary key,
+nombre varchar(100) not null,
+resumen varchar(100) not null,
+karma int(8) not null
+);
+
+
+create table conocimiento(
+cod_cono varchar(100) primary key,
+nombre varchar(100) not null,
+descripcion varchar(100) not null,
+cod_hab varchar(100) not null,
+constraint foreign key (cod_hab) references habilidad(cod_hab)
+);
+
+
+ESTA ES EL DETALLE DEL PROYECTO
+create table detalle_proyecto(
+cod_det_p int primary key,
+involucrados varchar(100) not null,
+cod_pro varchar(100) not null,
+constraint foreign key (cod_pro) references proyecto(cod_pro)
+);
+
+
+ESTA ES LA TAREA DEL PROYECTO
+create table tarea_de_proyecto(
+cod_tarea_pro varchar(100) primary key,
+nombre varchar(100) not null,
+descripcion varchar(100) not null,
+fecha_i varchar(100) not null,
+requisitos varchar(100) not null,
+pago int(8) not null,
+cod_pro varchar(100) not null,
+constraint foreign key (cod_pro) references proyecto(cod_pro)
+);
+
+
+ESTA ES LA DEL DETALLE DE TAREA QUE PERTENECE AL PROYECTO
+create table tareadetalle(
+cod_det_tarpro varchar(100) primary key,
+lista varchar(100) not null,
+cod_tarea_pro varchar(100) not null,
+foreign key (cod_tarea_pro) references tarea_de_proyecto(cod_tarea_pro)
+);
+
+create table estado(
+no_estado int auto_increment primary key,
+descripcion varchar(100) not null,
+nickname varchar(100) not null,
+constraint foreign key (nickname) references usuario(nickname)
+);
+
+create table comentario(
+no_comentario int auto_increment primary key,
+descripcion varchar(100) not null,
+no_estado int(100) not null,
+constraint foreign key (no_estado) references estado(no_estado)
+);
+
+create table mensaje(
+cod_mensaje int auto_increment primary key,
+contenido varchar(100) not null,
+nickname_recibe varchar(100) not null,
+nickname varchar(100) not null,
+constraint foreign key (nickname) references usuario(nickname)
+);
+
+
+
+
