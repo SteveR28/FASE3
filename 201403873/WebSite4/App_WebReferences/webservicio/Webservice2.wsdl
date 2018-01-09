@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Webservice/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Webservice2" targetNamespace="http://Webservice/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/Fase2/Webservice2?xsd=1" namespace="http://Webservice/" />
+    </xsd:schema>
+  </types>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="Verpartarea">
+    <part name="parameters" element="tns:Verpartarea" />
+  </message>
+  <message name="VerpartareaResponse">
+    <part name="parameters" element="tns:VerpartareaResponse" />
+  </message>
+  <message name="VerHabilidad">
+    <part name="parameters" element="tns:VerHabilidad" />
+  </message>
+  <message name="VerHabilidadResponse">
+    <part name="parameters" element="tns:VerHabilidadResponse" />
+  </message>
+  <message name="VerConocimiento">
+    <part name="parameters" element="tns:VerConocimiento" />
+  </message>
+  <message name="VerConocimientoResponse">
+    <part name="parameters" element="tns:VerConocimientoResponse" />
+  </message>
+  <message name="CrearUsuario">
+    <part name="parameters" element="tns:CrearUsuario" />
+  </message>
+  <message name="CrearUsuarioResponse">
+    <part name="parameters" element="tns:CrearUsuarioResponse" />
+  </message>
+  <message name="HistorialUsuario">
+    <part name="parameters" element="tns:HistorialUsuario" />
+  </message>
+  <message name="HistorialUsuarioResponse">
+    <part name="parameters" element="tns:HistorialUsuarioResponse" />
+  </message>
+  <message name="EnviarMensaje">
+    <part name="parameters" element="tns:EnviarMensaje" />
+  </message>
+  <message name="EnviarMensajeResponse">
+    <part name="parameters" element="tns:EnviarMensajeResponse" />
+  </message>
+  <message name="EnviarInvitacion">
+    <part name="parameters" element="tns:EnviarInvitacion" />
+  </message>
+  <message name="EnviarInvitacionResponse">
+    <part name="parameters" element="tns:EnviarInvitacionResponse" />
+  </message>
+  <message name="CrearAsociacion">
+    <part name="parameters" element="tns:CrearAsociacion" />
+  </message>
+  <message name="CrearAsociacionResponse">
+    <part name="parameters" element="tns:CrearAsociacionResponse" />
+  </message>
+  <message name="CrearProyecto">
+    <part name="parameters" element="tns:CrearProyecto" />
+  </message>
+  <message name="CrearProyectoResponse">
+    <part name="parameters" element="tns:CrearProyectoResponse" />
+  </message>
+  <message name="IngresarEstado">
+    <part name="parameters" element="tns:IngresarEstado" />
+  </message>
+  <message name="IngresarEstadoResponse">
+    <part name="parameters" element="tns:IngresarEstadoResponse" />
+  </message>
+  <message name="AgregarConocimiento">
+    <part name="parameters" element="tns:AgregarConocimiento" />
+  </message>
+  <message name="AgregarConocimientoResponse">
+    <part name="parameters" element="tns:AgregarConocimientoResponse" />
+  </message>
+  <message name="HistorialTareaIndividual">
+    <part name="parameters" element="tns:HistorialTareaIndividual" />
+  </message>
+  <message name="HistorialTareaIndividualResponse">
+    <part name="parameters" element="tns:HistorialTareaIndividualResponse" />
+  </message>
+  <message name="SeleccionarKarma">
+    <part name="parameters" element="tns:SeleccionarKarma" />
+  </message>
+  <message name="SeleccionarKarmaResponse">
+    <part name="parameters" element="tns:SeleccionarKarmaResponse" />
+  </message>
+  <message name="DetalleProyecto">
+    <part name="parameters" element="tns:DetalleProyecto" />
+  </message>
+  <message name="DetalleProyectoResponse">
+    <part name="parameters" element="tns:DetalleProyectoResponse" />
+  </message>
+  <message name="DetalleTareaPro">
+    <part name="parameters" element="tns:DetalleTareaPro" />
+  </message>
+  <message name="DetalleTareaProResponse">
+    <part name="parameters" element="tns:DetalleTareaProResponse" />
+  </message>
+  <message name="SeguirAmigo">
+    <part name="parameters" element="tns:SeguirAmigo" />
+  </message>
+  <message name="SeguirAmigoResponse">
+    <part name="parameters" element="tns:SeguirAmigoResponse" />
+  </message>
+  <message name="HistorialEstados">
+    <part name="parameters" element="tns:HistorialEstados" />
+  </message>
+  <message name="HistorialEstadosResponse">
+    <part name="parameters" element="tns:HistorialEstadosResponse" />
+  </message>
+  <message name="IngresarHabilidad">
+    <part name="parameters" element="tns:IngresarHabilidad" />
+  </message>
+  <message name="IngresarHabilidadResponse">
+    <part name="parameters" element="tns:IngresarHabilidadResponse" />
+  </message>
+  <message name="CrearTareaIndividual">
+    <part name="parameters" element="tns:CrearTareaIndividual" />
+  </message>
+  <message name="CrearTareaIndividualResponse">
+    <part name="parameters" element="tns:CrearTareaIndividualResponse" />
+  </message>
+  <message name="CrearTareaProyecto">
+    <part name="parameters" element="tns:CrearTareaProyecto" />
+  </message>
+  <message name="CrearTareaProyectoResponse">
+    <part name="parameters" element="tns:CrearTareaProyectoResponse" />
+  </message>
+  <message name="IngresarComentario">
+    <part name="parameters" element="tns:IngresarComentario" />
+  </message>
+  <message name="IngresarComentarioResponse">
+    <part name="parameters" element="tns:IngresarComentarioResponse" />
+  </message>
+  <message name="IngresarConocimiento">
+    <part name="parameters" element="tns:IngresarConocimiento" />
+  </message>
+  <message name="IngresarConocimientoResponse">
+    <part name="parameters" element="tns:IngresarConocimientoResponse" />
+  </message>
+  <message name="HistorialProyectosTareas">
+    <part name="parameters" element="tns:HistorialProyectosTareas" />
+  </message>
+  <message name="HistorialProyectosTareasResponse">
+    <part name="parameters" element="tns:HistorialProyectosTareasResponse" />
+  </message>
+  <message name="HistorialProyectos">
+    <part name="parameters" element="tns:HistorialProyectos" />
+  </message>
+  <message name="HistorialProyectosResponse">
+    <part name="parameters" element="tns:HistorialProyectosResponse" />
+  </message>
+  <message name="DetalleTareaIndividual">
+    <part name="parameters" element="tns:DetalleTareaIndividual" />
+  </message>
+  <message name="DetalleTareaIndividualResponse">
+    <part name="parameters" element="tns:DetalleTareaIndividualResponse" />
+  </message>
+  <portType name="Webservice2">
+    <operation name="hello">
+      <input wsam:Action="http://Webservice/Webservice2/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://Webservice/Webservice2/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="Login">
+      <input wsam:Action="http://Webservice/Webservice2/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://Webservice/Webservice2/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="Verpartarea">
+      <input wsam:Action="http://Webservice/Webservice2/VerpartareaRequest" message="tns:Verpartarea" />
+      <output wsam:Action="http://Webservice/Webservice2/VerpartareaResponse" message="tns:VerpartareaResponse" />
+    </operation>
+    <operation name="VerHabilidad">
+      <input wsam:Action="http://Webservice/Webservice2/VerHabilidadRequest" message="tns:VerHabilidad" />
+      <output wsam:Action="http://Webservice/Webservice2/VerHabilidadResponse" message="tns:VerHabilidadResponse" />
+    </operation>
+    <operation name="VerConocimiento">
+      <input wsam:Action="http://Webservice/Webservice2/VerConocimientoRequest" message="tns:VerConocimiento" />
+      <output wsam:Action="http://Webservice/Webservice2/VerConocimientoResponse" message="tns:VerConocimientoResponse" />
+    </operation>
+    <operation name="CrearUsuario">
+      <input wsam:Action="http://Webservice/Webservice2/CrearUsuarioRequest" message="tns:CrearUsuario" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
+    </operation>
+    <operation name="HistorialUsuario">
+      <input wsam:Action="http://Webservice/Webservice2/HistorialUsuarioRequest" message="tns:HistorialUsuario" />
+      <output wsam:Action="http://Webservice/Webservice2/HistorialUsuarioResponse" message="tns:HistorialUsuarioResponse" />
+    </operation>
+    <operation name="EnviarMensaje">
+      <input wsam:Action="http://Webservice/Webservice2/EnviarMensajeRequest" message="tns:EnviarMensaje" />
+      <output wsam:Action="http://Webservice/Webservice2/EnviarMensajeResponse" message="tns:EnviarMensajeResponse" />
+    </operation>
+    <operation name="EnviarInvitacion">
+      <input wsam:Action="http://Webservice/Webservice2/EnviarInvitacionRequest" message="tns:EnviarInvitacion" />
+      <output wsam:Action="http://Webservice/Webservice2/EnviarInvitacionResponse" message="tns:EnviarInvitacionResponse" />
+    </operation>
+    <operation name="CrearAsociacion">
+      <input wsam:Action="http://Webservice/Webservice2/CrearAsociacionRequest" message="tns:CrearAsociacion" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearAsociacionResponse" message="tns:CrearAsociacionResponse" />
+    </operation>
+    <operation name="CrearProyecto">
+      <input wsam:Action="http://Webservice/Webservice2/CrearProyectoRequest" message="tns:CrearProyecto" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearProyectoResponse" message="tns:CrearProyectoResponse" />
+    </operation>
+    <operation name="IngresarEstado">
+      <input wsam:Action="http://Webservice/Webservice2/IngresarEstadoRequest" message="tns:IngresarEstado" />
+      <output wsam:Action="http://Webservice/Webservice2/IngresarEstadoResponse" message="tns:IngresarEstadoResponse" />
+    </operation>
+    <operation name="AgregarConocimiento">
+      <input wsam:Action="http://Webservice/Webservice2/AgregarConocimientoRequest" message="tns:AgregarConocimiento" />
+      <output wsam:Action="http://Webservice/Webservice2/AgregarConocimientoResponse" message="tns:AgregarConocimientoResponse" />
+    </operation>
+    <operation name="HistorialTareaIndividual">
+      <input wsam:Action="http://Webservice/Webservice2/HistorialTareaIndividualRequest" message="tns:HistorialTareaIndividual" />
+      <output wsam:Action="http://Webservice/Webservice2/HistorialTareaIndividualResponse" message="tns:HistorialTareaIndividualResponse" />
+    </operation>
+    <operation name="SeleccionarKarma">
+      <input wsam:Action="http://Webservice/Webservice2/SeleccionarKarmaRequest" message="tns:SeleccionarKarma" />
+      <output wsam:Action="http://Webservice/Webservice2/SeleccionarKarmaResponse" message="tns:SeleccionarKarmaResponse" />
+    </operation>
+    <operation name="DetalleProyecto">
+      <input wsam:Action="http://Webservice/Webservice2/DetalleProyectoRequest" message="tns:DetalleProyecto" />
+      <output wsam:Action="http://Webservice/Webservice2/DetalleProyectoResponse" message="tns:DetalleProyectoResponse" />
+    </operation>
+    <operation name="DetalleTareaPro">
+      <input wsam:Action="http://Webservice/Webservice2/DetalleTareaProRequest" message="tns:DetalleTareaPro" />
+      <output wsam:Action="http://Webservice/Webservice2/DetalleTareaProResponse" message="tns:DetalleTareaProResponse" />
+    </operation>
+    <operation name="SeguirAmigo">
+      <input wsam:Action="http://Webservice/Webservice2/SeguirAmigoRequest" message="tns:SeguirAmigo" />
+      <output wsam:Action="http://Webservice/Webservice2/SeguirAmigoResponse" message="tns:SeguirAmigoResponse" />
+    </operation>
+    <operation name="HistorialEstados">
+      <input wsam:Action="http://Webservice/Webservice2/HistorialEstadosRequest" message="tns:HistorialEstados" />
+      <output wsam:Action="http://Webservice/Webservice2/HistorialEstadosResponse" message="tns:HistorialEstadosResponse" />
+    </operation>
+    <operation name="IngresarHabilidad">
+      <input wsam:Action="http://Webservice/Webservice2/IngresarHabilidadRequest" message="tns:IngresarHabilidad" />
+      <output wsam:Action="http://Webservice/Webservice2/IngresarHabilidadResponse" message="tns:IngresarHabilidadResponse" />
+    </operation>
+    <operation name="CrearTareaIndividual">
+      <input wsam:Action="http://Webservice/Webservice2/CrearTareaIndividualRequest" message="tns:CrearTareaIndividual" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearTareaIndividualResponse" message="tns:CrearTareaIndividualResponse" />
+    </operation>
+    <operation name="CrearTareaProyecto">
+      <input wsam:Action="http://Webservice/Webservice2/CrearTareaProyectoRequest" message="tns:CrearTareaProyecto" />
+      <output wsam:Action="http://Webservice/Webservice2/CrearTareaProyectoResponse" message="tns:CrearTareaProyectoResponse" />
+    </operation>
+    <operation name="IngresarComentario">
+      <input wsam:Action="http://Webservice/Webservice2/IngresarComentarioRequest" message="tns:IngresarComentario" />
+      <output wsam:Action="http://Webservice/Webservice2/IngresarComentarioResponse" message="tns:IngresarComentarioResponse" />
+    </operation>
+    <operation name="IngresarConocimiento">
+      <input wsam:Action="http://Webservice/Webservice2/IngresarConocimientoRequest" message="tns:IngresarConocimiento" />
+      <output wsam:Action="http://Webservice/Webservice2/IngresarConocimientoResponse" message="tns:IngresarConocimientoResponse" />
+    </operation>
+    <operation name="HistorialProyectosTareas">
+      <input wsam:Action="http://Webservice/Webservice2/HistorialProyectosTareasRequest" message="tns:HistorialProyectosTareas" />
+      <output wsam:Action="http://Webservice/Webservice2/HistorialProyectosTareasResponse" message="tns:HistorialProyectosTareasResponse" />
+    </operation>
+    <operation name="HistorialProyectos">
+      <input wsam:Action="http://Webservice/Webservice2/HistorialProyectosRequest" message="tns:HistorialProyectos" />
+      <output wsam:Action="http://Webservice/Webservice2/HistorialProyectosResponse" message="tns:HistorialProyectosResponse" />
+    </operation>
+    <operation name="DetalleTareaIndividual">
+      <input wsam:Action="http://Webservice/Webservice2/DetalleTareaIndividualRequest" message="tns:DetalleTareaIndividual" />
+      <output wsam:Action="http://Webservice/Webservice2/DetalleTareaIndividualResponse" message="tns:DetalleTareaIndividualResponse" />
+    </operation>
+  </portType>
+  <binding name="Webservice2PortBinding" type="tns:Webservice2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Verpartarea">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VerHabilidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="VerConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="HistorialUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnviarMensaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnviarInvitacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearAsociacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarEstado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgregarConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="HistorialTareaIndividual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SeleccionarKarma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DetalleProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DetalleTareaPro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SeguirAmigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="HistorialEstados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarHabilidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearTareaIndividual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearTareaProyecto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IngresarConocimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="HistorialProyectosTareas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="HistorialProyectos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DetalleTareaIndividual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Webservice2">
+    <port name="Webservice2Port" binding="tns:Webservice2PortBinding">
+      <soap:address location="http://localhost:8080/Fase2/Webservice2" />
+    </port>
+  </service>
+</definitions>
